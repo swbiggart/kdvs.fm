@@ -35,10 +35,10 @@ body {
 /* Styles you shouldn't keep as they are for displaying this base example only */
 .content .span5,
 .content .span10 {
-  min-height: 200px;
+  min-height: 50px;
 }
 /* Give a quick and non-cross-browser friendly divider */
-.content .span5 {
+.content .span10 {
   margin-left: 19;
   padding-left: 19px;
   border-left: 1px solid #eee;
@@ -52,3 +52,9 @@ body {
 .topbar .btn {
   border: 0;
 }
+.event {
+  margin-bottom: 4px;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+}
+

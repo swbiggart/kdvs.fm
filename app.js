@@ -42,6 +42,7 @@ app.configure('production', function(){
 
 app.get('/', routes.index);
 app.get('/playlist', routes.playlist);
+app.get('/show/:show_id', routes.show);
 app.get('/ajax', routes.ajax);
 
 var port = process.env.PORT || 3333;

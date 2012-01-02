@@ -4,43 +4,42 @@ html(lang="en")
     title= title
     link(rel="stylesheet", type="text/css", href="/stylesheets/bootstrap.min.css")
     link(rel="stylesheet", type="text/css", href="/stylesheets/style.css")
-    
-    script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js")
-    script(src="http://ajax.cdnjs.com/ajax/libs/json2/20110223/json2.js")
-    script(src="http://ajax.cdnjs.com/ajax/libs/underscore.js/1.1.6/underscore-min.js")
-    script(src="http://ajax.cdnjs.com/ajax/libs/backbone.js/0.3.3/backbone-min.js")
-    script(src="/javascripts/app.js")
+  body
+    .topbar
+      .topbar-inner
+        .container
+          a.brand(href='/') KDVS.fm
+          ul.nav
+            li
+              a(href="/#/schedule") Programming
+            li
+              a &rarr;
+            li
+              a(href="/#/show/1875") Dance Dance Revelation
+            li
+              a &rarr;
+            li 
+              a(href="#") 12/13/2011
+            li
+              a &rarr;
+            li.active
+              a(href="#") Playlist
+            
 
-  //
+          p.pull-right
+            a(href="/#/audio", style="padding: 10px 10px 11px;") Audio
+            a(href="/#/about", style="padding: 10px 10px 11px;") About  
+            
+    .container!= body
+    
     script(type="text/javascript", charset="utf-8", src="/javascripts/jquery.min.js")
-    script(type="text/javascript", src="http://ajax.cdnjs.com/ajax/libs/json2/20110223/json2.js")
     script(type="text/javascript", charset="utf-8", src="/javascripts/underscore.js")
     script(type="text/javascript", charset="utf-8", src="/javascripts/backbone.js")
     script(type="text/javascript", charset="utf-8", src="/javascripts/bootstrap-modal.js")
     script(type="text/javascript", charset="utf-8", src="/javascripts/bootstrap-twipsy.js")
     script(type="text/javascript", charset="utf-8", src="/javascripts/bootstrap-popover.js")
-    script(type="text/javascript", charset="utf-8", src="/javascripts/app.js")
-    
-  body
-    .topbar
-      .topbar-inner
-        .container
-          a.brand(href='#') KDVS.fm
-        //
-          ul.nav
-            li
-              a(href="#") Home
-            li.divider
-              a /
-            li
-              a(href="#") News
-            li /
-            li
-              a(href="#") Schedule
-            li
-              a(href="#") Contact
-            li
-              a(href="#") About
-          p.pull-right Logged in as 
-            a(href="#") Bob  
-    .container!= body
+    script(type="text/javascript", charset="utf-8", src="/javascripts/bootstrap-tabs.js")
+    script(type="text/javascript", charset="utf-8", src="/javascripts/application.js")
+    script(type="text/javascript", charset="utf-8", src="/javascripts/modules/schedule.js")
+    script(type="text/javascript", charset="utf-8", src="/javascripts/modules/show.js")
+    script(type="text/javascript", charset="utf-8", src="/javascripts/modules/playlist.js")

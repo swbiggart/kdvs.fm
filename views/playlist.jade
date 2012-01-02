@@ -1,21 +1,59 @@
-.span16
+#playlist_container.span16(style="display: none")
   .content
     .page-header
+      p.pull-right
+        a(href="/#/schedule") Back to Schedule
       h1 Dance Dance Revelation 
-        small Woolsey
+        small by Woolsey
     .row
-      .span10
-        img.pull-right(src='http://i42.tinypic.com/b5h7yw.jpg', width='200')
-        h2 12/23/2011
-        p 
-        //  include show_description.html
       .span5
         h4 Fridays 10:00pm - 12:00am
         p Metal, asbestos, hardcore, thrash, tighty whities, old men, metal, male pattern baldness, metal
         dl
           dt Genre
             dd Metal, Hardcore, Punk
-
+            
+        dl
+          dt
+            h3(style="line-height: none;") Upcoming 
+              small
+                a(href="#") more
+            dd
+              a(href="#")  12/19/2011
+        dl
+          dt 
+            h3(style="line-height: none;") History 
+              small
+                a(href="#") more
+            dd
+              a(href="#") 12/19/2011
+            dd
+              a(href="#") 12/19/2011
+      .span10
+        h2.pull-right(style="line-height:34px;") 12/13/2011
+        ul.tabs(data-tabs="tabs")
+          li.active
+            a(href="#description") Show Notes
+          li
+            a(href="#playlist") Playlist
+          li
+            a(href="#audio") Audio
+        #show-content.tab-content
+          #description.tab-pane.active
+            img.pull-right(src='http://i42.tinypic.com/b5h7yw.jpg', width='250')
+            p 
+              include show_description.html
+          #playlist.tab-pane
+            table#playlist.bordered-table.zebra-striped
+              thead
+                th 
+                  center Artist - "Song" on 
+                    em Album 
+                    | (Label)
+              tbody
+          #audio.tab-pane
+            p audio
+  //
     .row
       .playlist
         table#playlist.bordered-table.zebra-striped

@@ -1,0 +1,39 @@
+- var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+#schedule_container.span16(style="display: none")
+  .content
+    .page-header
+      h1 Programming
+    ul.tabs(data-tabs="tabs")
+      - each day, i in days
+        li(id="tab_dotw#{i}")
+          a(href="#dotw#{i}") #{day}
+    
+      li
+        a(href="#all") All
+      
+    #schedule-content.tab-content
+      - each day, i in days
+        .tab-pane(id='dotw'+i)
+          table.bordered-table.zebra-striped(id='dotw'+i)
+            thead
+              th(width="8%")
+                center Time
+              th(width="20%")
+                center Hosts
+              th(width="30%")
+                center Show
+              th
+                center Description
+            tbody
+    
+      #all.tab-pane
+        table#schedule.bordered-table
+          thead
+            - each day, i in days
+              th(width="14%") 
+                center #{day}
+          tbody
+          thead
+            - each day, i in days
+              th(width="14%") 
+                center #{day}
